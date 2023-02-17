@@ -7,12 +7,24 @@
   </head>
   <body>
     <h1>Login Page</h1>
-    <form action="" method="POST">
+    <form>
       <label for="username">Username:</label>
       <input type="text" id="username" name="username"><br><br>
       <label for="password">Password:</label>
       <input type="password" id="password" name="password"><br><br>
-      <input type="submit" value="Login">
+      <input type="button" value="Login" onclick="login()">
     </form>
+    <script>
+      function login() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        if (username === "Admin" && password === "admin123") {
+          alert("Login successful!");
+          location.href = 'https://www.javascripttutorial.net/';
+        } else {
+          alert("Invalid username or password.");
+        }
+      }
+    </script>
   </body>
 </html>
